@@ -1,10 +1,8 @@
-Formstack.Form.prototype.initGybFields = function(){
-    $("#gyb-go-button").click($.proxy(function(e){
-         e.preventDefault(); 
-         Formstack.Form.prototype.nextPage();
-     
- }, Formstack.Form));
-   
-}
-
-Formstack.Form.prototype.initGybFields();
+var gybFSFormName = 'form' + $('input[name="form"]').val();
+         var gybFSForm = window[gybFSFormName];
+         
+         $('#gyb-go-button').bind("click", $.proxy(function(e) {
+             e.preventDefault();
+             this.nextPage();
+             
+         }, gybFSForm));
