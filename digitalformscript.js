@@ -3,7 +3,7 @@ Formstack.Form.prototype.initGybFields = function(){
          e.preventDefault(); 
          this.nextPage();
      
- }, this));
+ }, Formstack.Form));
    
 }
 
